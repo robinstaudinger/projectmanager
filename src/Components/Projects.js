@@ -12,10 +12,11 @@ class Projects extends Component {
           <ProjectItem key={project.title} project={project} />
         );
     });
-  }
+    }
     return (
       <div className="Projects">
-      {projectItems}
+      <h3> Latest Projects </h3><br/>
+        {projectItems}
       </div>
     );
   }

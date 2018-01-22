@@ -11,16 +11,16 @@ class App extends Component {
     }
   }
 
-  ComponentWillMount(){
+  componentWillMount(){
     this.setState({
       projects: [
         {
-          title: "Business Website",
+          title: "Portfolio Website",
           category: "Web Design"
         },
         {
-          title: "Social App",
-          category: "Mobile Development"
+          title: "Casino Card Game",
+          category: "Software Development"
         },
         {
           title: "Business Website",
@@ -32,12 +32,15 @@ class App extends Component {
   }
 
   handleAddProject(project){
-    console.log(project);
+    let projects = this.state.projects;
+    projects.push(project);
+    this.setState({projects:projects});
   }
+
   render() {
     return (
       <div className="App">
-      <AddProject addproject={this.handleAddProject.bind(this)}/>
+      <AddProject addProject={this.handleAddProject.bind(this)}/>
       <Projects projects={this.state.projects}/>
       </div>
     );
