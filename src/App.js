@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Projects from './Components/Projects';
 import AddProject from './Components/AddProject';
+import Skills from './Components/Skills';
 import './App.css';
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      projects: []
+      projects: [],
+      skills: []
     }
   }
 
@@ -27,7 +29,15 @@ class App extends Component {
           category: "Web Development"
       }
 
-      ]
+    ],
+    skills: [
+      "Software Development",
+      "Robotics",
+      "Artificial Intelligence",
+      "Web Development",
+      "Management",
+      "Problem Solving"
+    ]
     });
   }
 
@@ -42,6 +52,7 @@ class App extends Component {
       <div className="App">
       <AddProject addProject={this.handleAddProject.bind(this)}/>
       <Projects projects={this.state.projects}/>
+      <Skills skills={this.state.skills}/>
       </div>
     );
   }
