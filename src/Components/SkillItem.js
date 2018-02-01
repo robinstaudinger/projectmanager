@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class SkillItem extends Component {
   render() {
     return (
-      <li key={this.props.skill} className="Skill">
+      <div key={this.props.skill} className={this.props.skill} style={this.props.idStyle} >
       <strong>{this.props.skill}</strong>
-      </li>
+      </div>
     );
   }
 }
